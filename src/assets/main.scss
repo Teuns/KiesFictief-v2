@@ -1,0 +1,17 @@
+@import './base.scss';
+
+a {
+    color: $link-color;
+}
+
+.container {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--space-xs);
+    padding-right: var(--space-xs);
+}
+
+.container.container--quiz {
+    max-width: 100%;
+}

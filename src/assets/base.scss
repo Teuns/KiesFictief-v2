@@ -1,0 +1,66 @@
+/** colors **/
+$primary-color: #ffffff;
+$secondary-color: #3742fa;
+$text-color: #333333;
+$link-color: #333333;
+$border-color: #cccccc;
+$border-secondary-color: #eeeeee;
+
+$box-text-color: #ffffff;
+$box-bg-color: #000000;
+$box-overlay-text-color: #333333;
+$box-overlay-bg-color: #ffffff;
+
+$option-text-color: #000000;
+$option-bg-color: #eaeaea;
+
+$circle-bg-color: #cccccc;
+$circle-stroke-color: $secondary-color;
+$circle-text-color: #333333;
+$bar-bg-color: #ffffff;
+$bar-border-color: #cccccc;
+
+/** spacing **/
+:root {
+    --space-xxs: 8px;
+    --space-xs: 16px;
+    --space-sm: 24px;
+    --space-md: 32px;
+    --space-lg: 48px;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("./fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("./fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("./fonts/Roboto/Roboto-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    position: relative;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    color: $text-color;
+    line-height: 1.6;
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    margin: 0;
+}

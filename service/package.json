@@ -1,0 +1,42 @@
+{
+  "name": "kiesfictief",
+  "version": "1.0.0",
+  "description": "A Vue.js project",
+  "author": "Teun Strik",
+  "private": true,
+  "scripts": {
+    "service": "SET NODE_ENV=production & nodemon ./app.js",
+    "test": "SET NODE_ENV=testing & mocha"
+  },
+  "dependencies": {
+    "connect-busboy": "0.0.2",
+    "cors": "^2.8.5",
+    "moment": "^2.24.0",
+    "mysql2": "^2.1.0",
+    "nodemailer": "^6.4.11",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "bcrypt": "^4.0.1",
+    "express": "^4.17.1",
+    "form-data": "^3.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^7.1.1",
+    "mysql": "^2.18.1",
+    "open-graph-scraper": "^3.6.2",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "sequelize": "^5.21.13",
+    "slugify": "^1.4.0",
+    "supertest": "^4.0.2"
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
