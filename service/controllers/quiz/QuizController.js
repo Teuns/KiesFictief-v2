@@ -217,13 +217,13 @@ const getQuizzes = async () => {
     });
 };
 
-// get statement
+// Get statement
 router.get('/statement/:id', function (req, res) {
     const statementId = req.params.id;
     getStatementById(statementId).then((result) => res.json(result));
 });
 
-// create party
+// Create party
 router.post('/add-party', getAuth, async function (req, res, next) {
     const { title, description, logo } = req.body;
     addParty({ title, description, logo })
@@ -249,13 +249,13 @@ router.post('/add-party', getAuth, async function (req, res, next) {
         });
 });
 
-// get party statement
+// Get party statement
 router.get('/party-statement/:id', getAuth, function (req, res) {
     const partyStatementId = req.params.id;
     getPartyStatementById(partyStatementId).then((result) => res.json(result));
 });
 
-// update party statement
+// Update party statement
 router.post('/party-statement/:id', getAuth, async function (req, res) {
     const id = req.params.id;
     const { is_neither, is_false, description } = req.body;
@@ -265,7 +265,7 @@ router.post('/party-statement/:id', getAuth, async function (req, res) {
     });
 });
 
-// add statement to quiz
+// Add statement to quiz
 router.post('/add-statement', getAuth, async function (req, res, next) {
     const { title, description, quizId, partyId } = req.body;
     createStatement({ title, description, quizId, partyId }).then(() => {
@@ -273,7 +273,7 @@ router.post('/add-statement', getAuth, async function (req, res, next) {
     });
 });
 
-// update statement
+// Update statement
 router.post('/update-statement', getAuth, async function (req, res, next) {
     const { title, description, quizId, statementId, remove } = req.body;
     updateStatement({
@@ -287,7 +287,7 @@ router.post('/update-statement', getAuth, async function (req, res, next) {
     });
 });
 
-// create quiz
+// Create quiz
 router.post('/add', getAuth, async function (req, res, next) {
     const { title } = req.body;
     createQuiz({ title })
@@ -300,7 +300,7 @@ router.post('/add', getAuth, async function (req, res, next) {
         });
 });
 
-// update quiz
+// Update quiz
 router.post('/update/:id', getAuth, async function (req, res, next) {
     const { title, published, remove } = req.body;
     const quizId = req.params.id;
@@ -309,13 +309,13 @@ router.post('/update/:id', getAuth, async function (req, res, next) {
     });
 });
 
-// get party
+// Get party
 router.get('/party/:id', getAuth, function (req, res) {
     const partyId = req.params.id;
     getPartyById(partyId).then((result) => res.json(result));
 });
 
-// update party
+// Update party
 router.post('/update-party/:id', getAuth, async function (req, res, next) {
     const { title, description, remove } = req.body;
     const partyId = req.params.id;
@@ -341,7 +341,7 @@ router.get('/statements', getAuth, function (req, res) {
     getStatements().then((result) => res.json(result));
 });
 
-// get quiz
+// Get quiz
 router.get('/:id', function (req, res) {
     const quizId = req.params.id;
     getQuizById(quizId).then((result) => res.json(result));

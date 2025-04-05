@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 const db = require('./database/db'),
     sequelize = db.sequelize;
 
-// check the databse connectionsequelize
+// Check the database connection
 sequelize
     .authenticate()
     .then(() => console.log('Connection has been established successfully.'))
@@ -31,13 +31,13 @@ const StatementModel = sequelize.import('./models/Statement');
 const PartyModel = sequelize.import('./models/Party');
 const PartyStatementModel = sequelize.import('./models/Party_Statement');
 
-// registered api routing
+// Registered api routing
 app.use('/api/quiz', quizApi.router);
 
-// monitor port
+// Monitor port
 db.sequelize.sync({ force: isTesting }).then(async function () {
     db.sequelize.query('SET NAMES utf8mb4;');
-    // create roles
+    // Create roles
 
     app.listen(config.port, config.hostname, function () {
         console.log(`Successfully listening at port: ${config.port}`);
