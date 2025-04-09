@@ -1,5 +1,5 @@
 import config from './config.js';
-import Sequelize from 'sequelize'; // initialize an instance of Sequelize
+import Sequelize from 'sequelize';
 import * as process from 'node:process';
 
 const isTesting = process.env.NODE_ENV === 'testing';

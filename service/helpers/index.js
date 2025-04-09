@@ -1,4 +1,4 @@
-const secret = '$2y$10$L3ns9tOr6R1kj7xDV.B8PexIQplIX8XeOOOKs3x4aw.ENIRj8nB86%';
+import { secret } from '../database/config.js';
 
 export const getAuth = function (req, res, next) {
     if (req.query.token) {

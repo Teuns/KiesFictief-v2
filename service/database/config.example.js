@@ -1,3 +1,6 @@
+export const secret =
+    '$2y$10$L3ns9tOr6R1kj7xDV.B8PexIQplIX8XeOOOKs3x4aw.ENIRj8nB86%';
+
 export default {
     mysql: {
         database: 'database',
