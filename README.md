@@ -4,7 +4,7 @@ Simple funny fictional political quiz game where one could see which party they 
 
 ### TODO:
 * Refactor code
-* Same as above, but more specific: Make `service/controllers/QuizController.js` a lot smaller, it's currently too big of a mess. Needs to be split up into multiple files, i.e. by moving helper functions to a global file
+* ~~Same as above, but more specific: Make `service/controllers/QuizController.js` a lot smaller, it's currently too big of a mess. Needs to be split up into multiple files, i.e. by moving helper functions to a global file~~
 
 ## Project Setup (front-end & back-end)
 
