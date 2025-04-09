@@ -1,4 +1,4 @@
-module.exports = function (sequelize, DataTypes) {
+export default function (sequelize, DataTypes) {
     return sequelize.define('party', {
         title: {
             type: DataTypes.STRING,
@@ -33,4 +33,4 @@ module.exports = function (sequelize, DataTypes) {
             defaultValue: sequelize.fn('NOW'),
         },
     });
-};
+}

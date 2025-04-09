@@ -1,4 +1,4 @@
-module.exports = function (sequelize, DataTypes) {
+export default function (sequelize, DataTypes) {
     return sequelize.define(
         'party_statement',
         {
@@ -52,6 +52,6 @@ module.exports = function (sequelize, DataTypes) {
                     fields: ['party_id', 'statement_id'],
                 },
             ],
-        }
+        },
     );
-};
+}

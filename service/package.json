@@ -5,9 +5,11 @@
   "author": "Teun Strik",
   "private": true,
   "scripts": {
+    "dev": "set NODE_ENV=development & node ./app.js",
     "service": "SET NODE_ENV=production & nodemon ./app.js",
     "test": "SET NODE_ENV=testing & mocha"
   },
+  "type": "module",
   "dependencies": {
     "connect-busboy": "0.0.2",
     "cors": "^2.8.5",
@@ -17,15 +19,19 @@
     "nodemon": "^2.0.7"
   },
   "devDependencies": {
+    "@eslint/js": "^9.24.0",
     "bcrypt": "^4.0.1",
+    "eslint": "^9.24.0",
     "express": "^4.17.1",
     "form-data": "^3.0.0",
+    "globals": "^16.0.0",
     "jsonwebtoken": "^8.5.1",
     "mocha": "^7.1.1",
     "mysql": "^2.18.1",
     "open-graph-scraper": "^3.6.2",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
+    "prettier": "3.5.3",
     "sequelize": "^5.21.13",
     "slugify": "^1.4.0",
     "supertest": "^4.0.2"
