@@ -3,7 +3,7 @@ import { useStore } from '@/stores';
 const store = useStore();
 const parties = await store.getParties;
 const quizzes = await store.getQuizzes;
-const quiz = quizzes.filter((quiz) => quiz.published === 1)[0];
+const quiz = quizzes.find((quiz) => quiz.published === 1);
 </script>
 
 <template>
@@ -40,9 +40,9 @@ const quiz = quizzes.filter((quiz) => quiz.published === 1)[0];
                         Daarna vragen we je toestemming om bepaalde gegevens te
                         delen. Dat is niet verplicht. Ook zonder akkoord te
                         gaan, kun je de uitslag bekijken. Verder gebruiken we
-                        Google Analytics om de KiesFictief te verbeteren. We
-                        hebben Google Analytics op een privacyvriendelijke
-                        manier ingesteld.
+                        Google Analytics om KiesFictief te verbeteren. We hebben
+                        Google Analytics op een privacyvriendelijke manier
+                        ingesteld.
                     </p>
                     <p>&copy; KiesFictief</p>
                 </div>
