@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     mysql: {
         database: 'database',
         username: 'username',

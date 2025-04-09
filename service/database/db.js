@@ -1,5 +1,6 @@
-const config = require('./config.js');
-const Sequelize = require('sequelize'); // initialize an instance of Sequelize
+import config from './config.js';
+import Sequelize from 'sequelize'; // initialize an instance of Sequelize
+import * as process from 'node:process';
 
 const isTesting = process.env.NODE_ENV === 'testing';
 
@@ -13,4 +14,4 @@ let db = {};
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-module.exports = db;
+export default db;
