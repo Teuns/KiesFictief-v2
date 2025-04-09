@@ -1,4 +1,3 @@
-// node Backend Server Entry
 import express from 'express';
 import bodyParser from 'body-parser';
 import config from './database/config.js';
@@ -6,7 +5,7 @@ import quizApi from './controllers/quiz/QuizController.js';
 import * as process from 'node:process';
 import db from './database/db.js';
 
-const isTesting = process.env.NODE_ENV === 'testing' ? true : false;
+const isTesting = process.env.NODE_ENV === 'testing';
 
 const app = express();
 

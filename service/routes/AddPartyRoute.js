@@ -27,7 +27,7 @@ export default async function (req, res) {
     addParty({ title, description, logo })
         .then(async (model) => {
             let done;
-            // Add all statements to the new created party and make them false (disagreeing)
+            // Add all statements to the newly created party and make them false (disagreeing)
             await StatementModel.findAll().then(function (statement_model) {
                 statement_model.forEach((statement) => {
                     PartyStatementModel.findOrCreate({
